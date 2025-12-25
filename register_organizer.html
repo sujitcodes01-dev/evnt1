@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ORGANIZER REGISTRATION</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.6);
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Checkbox Styling */
+        .checkbox-group {
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 8px;
+            accent-color: #667eea;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        input[type="submit"] {
+            background: #667eea;
+            color: #fff;
+        }
+
+        input[type="reset"] {
+            background: #e74c3c;
+            color: #fff;
+            float: right;
+        }
+
+        input[type="submit"]:hover {
+            background: #5563c1;
+            transform: scale(1.03);
+        }
+
+        input[type="reset"]:hover {
+            background: #c0392b;
+            transform: scale(1.03);
+        }
+
+        br {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="org_register_validate">
+        <h2>Organizer Registration</h2>
+
+        Organizer Name:
+        <input type="text" name="org_nm" placeholder="Type your name">
+
+        Email Id:
+        <input type="text" name="org_eml">
+
+        Contact Number:
+        <input type="number" name="org_contact">
+
+        Password:
+        <input type="password" name="org_reg_pass">
+
+        Service Type:
+        <div class="checkbox-group">
+            <label>
+                <input type="checkbox" name="org_serv[]" value="Catering">
+                Catering
+            </label>
+
+            <label>
+                <input type="checkbox" name="org_serv[]" value="Decoration">
+                Decoration
+            </label>
+
+            <label>
+                <input type="checkbox" name="org_serv[]" value="Event Management">
+                Hall
+            </label>
+        </div>
+
+        Description:
+        <textarea rows="5" cols="50" name="org_desc"></textarea>
+
+        Security:
+        <input type="text" name="org_security" placeholder="Type for Security">
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
