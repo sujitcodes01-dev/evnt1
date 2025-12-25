@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Organizer Login</title>
+
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .login-box {
+                background: #ffffff;
+                padding: 30px;
+                width: 360px;
+                border-radius: 12px;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+                animation: fadeIn 0.8s ease-in-out;
+                text-align: center;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(25px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 6px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 14px;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            input:focus {
+                border-color: #667eea;
+                box-shadow: 0 0 6px rgba(102, 126, 234, 0.6);
+                outline: none;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 48%;
+                padding: 10px;
+                font-size: 15px;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background 0.3s ease, transform 0.2s ease;
+            }
+
+            input[type="submit"] {
+                background-color: #667eea;
+                color: #ffffff;
+            }
+
+            input[type="reset"] {
+                background-color: #e74c3c;
+                color: #ffffff;
+                float: right;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #5563c1;
+                transform: scale(1.05);
+            }
+
+            input[type="reset"]:hover {
+                background-color: #c0392b;
+                transform: scale(1.05);
+            }
+
+            /* ===== Link Styling ===== */
+            a {
+                display: block;
+                text-align: left;
+                margin-top: 8px;
+                text-decoration: none;
+                color: #667eea;
+                font-size: 14px;
+            }
+
+            a:first-of-type {
+                margin-top: 20px; /* space above Forgot Password */
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            br {
+                clear: both;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="login-box">
+            <h2>Organizer Login</h2>
+
+            <form method="post" action="org_login_validate">
+                Email Id:
+                <input type="text" name="log_eml">
+
+                Password:
+                <input type="password" name="log_pass">
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+
+            <a href="org_forgot_pass.html">Forgot Password?</a>
+            <a href="register_organizer.html">Don't have an account? Register</a>
+        </div>
+    </body>
+</html>
